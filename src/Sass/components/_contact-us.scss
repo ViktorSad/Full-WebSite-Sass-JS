@@ -1,0 +1,131 @@
+.contact-us {
+  background-color: $color-background;
+  padding: 62px 0 82px;
+  @include media-desktop {
+    padding: 48px 0 50px;
+  }
+  @include media-mobile {
+    padding-top: 34px;
+    padding-bottom: 49px;
+  }
+}
+
+.contact-us__line {
+  gap: 16px;
+  margin-bottom: 18px;
+  @include media-desktop {
+  gap: 19px;
+  }
+  @include media-mobile {
+    gap:16px;
+    margin-bottom: 16px;
+    
+    }
+    > input{@include media-mobile {
+      flex-basis: 100%;
+      }
+    }
+}
+.contact-us__textarea {
+  margin-bottom: 24px;
+}
+
+.contact-us__form {
+  input,
+  textarea {
+    border: 1px solid $color-light;
+    padding: 10px 22px 9px 20px;
+    background-color: $color-light;
+    border-radius: 5px;
+    @include font(
+      $size: 1.6rem,
+      $weight: 400,
+      $height: 2.6rem,
+      $font-color: $color-text
+    );
+    &:focus {
+      outline: none;
+      border-color: $color-primary;
+    }
+    &::placeholder {
+      color: $color-text-input;
+    }
+  }
+  textarea {
+    width: 100%;
+    resize: none;
+    height: 160px;
+  }
+}
+.contact-us__button {
+  > button {
+    min-width: 117px;
+  }
+}
+.contact-us__title {
+  margin: 0 0 17px;
+  text-align: center;
+  @include media-mobile {
+    margin-bottom: 8px;
+  }
+}
+.contact-us-container {
+  @include media-desktop {
+    flex-direction: column;
+    text-align: center;
+    gap: 35px;
+  }
+  @include media-mobile {
+   gap: 41px;
+  }
+}
+  .contact-us__content {
+    @include media-desktop {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+.contact-us__description {
+  max-width: 528px;
+  margin: 0 0 59px;
+  @include media-desktop {
+    margin: 0 0 26px;
+    max-width: 100%;
+  }
+  @include media-mobile {
+    margin: 0 0 24px;
+  }
+}
+.contact-us__link {
+  margin: 0 0 19px;
+  display: inline-flex;
+  align-items: center;
+  @include font(
+    $size: 2.5rem,
+    $weight: 400,
+    $height: 2.6rem,
+    $font-color: $color-tag-text
+  );
+  @include media-mobile {
+    @include font(
+      $size: 2rem,
+      $weight: 400,
+      $height: 2.6rem,
+      $font-color: $color-tag-text
+    );
+    margin: 0 0 17px;
+  }
+  @include media-desktop {
+    justify-content: center;
+  }
+  > a {
+    margin-left: 11px;
+    text-decoration: none;
+    color: $color-tag-text;
+    @include media-mobile {
+      margin-left: 7px;
+    }
+  }
+}

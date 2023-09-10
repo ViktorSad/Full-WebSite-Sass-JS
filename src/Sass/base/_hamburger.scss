@@ -1,0 +1,38 @@
+%hamburger__line {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 3px;
+  border-radius: 5px;
+  background: $color-hamburger;
+  left: 0;
+}
+.hamburger {
+  content: "";
+  display: none;
+  width: 31px;
+  height: 25px;
+  position: relative;
+  @include media-tablet {
+    display: inline-block;
+    margin-right: 37px;
+  }
+  @include media-mobile {
+    margin-right: 61px;
+    width: 27px;
+    height: 22px;
+  }
+  &:before {
+    @extend %hamburger__line;
+    top: 0;
+  }
+  &:after {
+    @extend %hamburger__line;
+    bottom: 0;
+  }
+}
+.hamburger__line {
+  @extend %hamburger__line;
+  top: calc(50% - 1.5px);
+}

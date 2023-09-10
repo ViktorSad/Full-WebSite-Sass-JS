@@ -1,0 +1,17 @@
+.navigation {
+  display: flex;
+  @include font($size: 1.5rem, $weight: 400, $height: 2.8rem);
+}
+.navigation__link {
+  list-style: none;
+  padding: 0 10px;
+  cursor: pointer;
+  &:hover {
+    color: $color-primary;
+  }
+}
+.header__navigation {
+  @include media-tablet {
+    display: none;
+  }
+}

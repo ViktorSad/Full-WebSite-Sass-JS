@@ -1,0 +1,19 @@
+.logo {
+  display: flex;
+}
+.logo-object {
+  @include media-mobile {
+    max-width: 129px;
+  }
+
+  
+}
+.logo-path {
+  @extend %transition;
+}
+.logo-svg:hover {
+  cursor: pointer;
+  .logo-path {
+    fill: $color-primary;
+  }
+}
