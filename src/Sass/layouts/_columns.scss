@@ -3,6 +3,11 @@
 }
 .layout-3-column {
   @include columns(30%);
+  &:after {
+    display: block;
+    content: "";
+    flex-basis: 30%;
+  }
 }
 .layout-2-column {
   @include columns(48%);

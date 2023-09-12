@@ -52,6 +52,9 @@
   display: flex;
   flex-direction: column;
   background: $color-light;
+  &_hidden {
+    display: none;
+  }
   @include media-desktop {
     flex-basis: 48%;
     max-width: 323px ;
@@ -83,4 +86,26 @@
 .strategy__name {
   margin: 0 0 29px;
   flex-grow: 1;
+}
+
+.article-modal__content {
+  .strategy__image {
+      width: 100%;
+      @include media-tablet {
+          position: static;
+      }
+  }
+
+  .strategy__date {
+      @include font ($size: 1.3rem, $weight: normal,$height:normal);
+      margin: 0 0 5px;
+  }
+
+  .strategy__name {
+      margin-bottom: 10px;
+  }
+
+  .strategy__text {
+      margin: 0 0 12px;
+  }
 }
